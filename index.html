@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Growth Vardhan</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>🌱 Growth Vardhan – Poem Writer & Translator</h1>
+  <label>🎨 Pick a text color:</label> <input type="color" id="textColor" value="#000000"><br><textarea id="poemInput" placeholder="Write your poem here..."></textarea><br>
+  <button onclick="suggestMetaphor()">Suggest Metaphor</button>
+  <p id="metaphorBox">💡</p>
+  <button onclick="savePoem()">Save Poem</button>
+
+  <h2>🌍 Translate</h2>
+  <textarea id="translateInput" placeholder="Enter text to translate..."></textarea><br>
+  <label>From:</label>
+  <select id="sourceLang"><option value="">Auto Detect</option><option value="en">English</option><option value="es">Spanish</option><option value="hi">Hindi</option><option value="ur">Urdu</option></select>
+  →
+  <select id="targetLang"><option value="en">English</option><option value="es">Spanish</option><option value="hi">Hindi</option><option value="ur">Urdu</option></select><br><br>
+  <button onclick="translateText()">Translate</button>
+  <p id="translatedOutput">🌐</p>
+  <script src="/main.js"></script>
+</body>
+</html>
