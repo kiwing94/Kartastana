@@ -15,3 +15,10 @@ button {
   color: white;
   border: none;
 }
+
+
+select {
+  max-height: 200px;
+  overflow-y: auto;
+  display: block;
+}
