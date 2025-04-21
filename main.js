@@ -19,15 +19,10 @@ function translateText() {
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({text, source, target})
   }).then(res => res.json()).then(data => {
-    if (data.error) {
-      document.getElementById('translatedOutput').innerText = "❌ " + data.error;
-    } else {
-      document.getElementById('translatedOutput').innerText = data.data.translations[0].translatedText;
-    }
+    const translation = data?.data?.translations?.[0]?.translatedText || "❌ Translation failed";
+    document.getElementById('translatedOutput').innerText = translation;
   });
 }
-
-
 document.getElementById("textColor").addEventListener("change", function () {
   document.getElementById("poemInput").style.color = this.value;
 });
